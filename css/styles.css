@@ -139,6 +139,7 @@ main div {
     font-size: 1.625em; /*antes 26px*/
 }
 
+/*Al section hay que crearle dos clases, una flex con estos datos y otra grid para ubicar usando grid*/
 section {
     display: flex;
     justify-content: center;
