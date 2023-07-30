@@ -11,7 +11,9 @@ header {
 
     top: 0; /*para que  quede en el margen de la pantalla*/
     z-index: 10; 
-    
+}
+
+#header {
     padding: 1em;
     background: linear-gradient(to right, rgb(116, 138, 137), rgb(27, 59, 59));  
     box-shadow: 5px 1px 10px black;
@@ -19,28 +21,18 @@ header {
     border-color: rgb(100, 88, 88);
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-	height: 4em;  /*antes 67.2px*/
-}
-
-.nav-menu {
+#navbarSupportedContent {
     position: relative;
-    left: 10%;
-    display: flex;
-    list-style: none;
-    z-index: 10; /*sino el menú de móviles se escondía tras las imágenes*/
+    left: 5em;
 }
 
-.nav-menu-link {
+li a {
 	padding: .562rem; /*antes 9px*/ 
-	margin: .29rem;  /*antes 4.64px*/
-    text-decoration: none; 
-	color: rgb(227, 226, 231);
-    font-size: 1.3em; /*antes 24px*/
-    background-color: rgb(45, 98, 93); 
-    border-radius: 33%;
+	margin: .29rem;  /*antes 4.64px*/ 
+	color: rgb(227, 226, 231) !important; 
+    font-size: 1.3em !important; /*antes 24px*/
+    text-align: center;
+    background-color: rgb(45, 98, 93) !important; 
     box-shadow: 5px 1px 5px rgb(45, 31, 31); 
     transition: all 1s linear 0.5s;
 }
@@ -49,54 +41,45 @@ nav {
     padding: .562rem; /*antes 9px*/ 
 	margin: .29rem;  /*antes 4.64px*/
     text-decoration: none; 
-	color: rgb(190, 19, 39);
+	color: rgb(190, 19, 39) !important;
     font-size: 1.3em; /*antes 24px*/
-    font-weight: 600;
-    background-color: rgb(153, 189, 186); 
-    border-radius: 33%;
+    font-weight: 600 !important;
+    background-color: rgb(153, 189, 186) !important; 
     box-shadow: 5px 1px 5px rgb(45, 31, 31); 
     transition: all 1s linear 0.5s;
 }
 
-.boton {
+.boton, #boton {
     padding: .5rem;
     margin-top: 1rem;
     margin-left: 40%;
     color: rgb(227, 226, 231);
     font-size: 1em; /*antes 24px*/
     background-color: rgb(45, 98, 93); 
-    border-radius: 33%;
     box-shadow: 5px 1px 5px rgb(45, 31, 31); 
     transition: all 1s linear 0.5s;
 }
 
-.nav-menu-link:hover, .boton:hover, .nav-menu-link-active:hover {
-	background-color: #4c76a5;
-	box-shadow: 5px 1px 5px rgb(135, 131, 131);
+li a:hover, .boton:hover, #boton:hover, .nav-menu-link-active:hover {
+	background-color: #4c76a5 !important;
+	box-shadow: 5px 1px 5px rgb(135, 131, 131) !important;
     transition: all 1s linear 0.1s;
-} 
+}
 
-.nav-toggle {
-    color: white;
-    background: none;
+#toggle {
     border: none;
-    font-size: 2.5em;
     cursor: pointer;
-    display: none;
     transition: all 1s linear 0.5s;
 }
 
-.nav-toggle:hover {
+
+#toggle:hover {
     box-shadow: 5px 1px 5px rgb(227, 220, 220);
     transition: all 1s linear 0.1s;
 }
 
 /*Para darle estilo al nombre del comercio*/
 h1 {
-    position: absolute;
-    top: -1.5rem;
-    left: 1%;
-    margin-bottom: 2rem;
     font-family: cursive;
     font-size: 3em; /*antes 50px*/
     font-style: italic;
@@ -388,42 +371,6 @@ como parte de la experimentación*/
 
     article {
         width: 70%;
-    }
-
-    header {
-        display: flex;
-        justify-content: space-between;
-        height: 4.75rem;
-    }
-
-    h1 {
-        position: absolute; 
-        left: 2rem;
-        margin-top: 1.4rem;
-        top: 0;
-    }
-
-    .nav-menu {
-        flex-direction: column;
-        align-items: flex-end;
-        position: fixed;
-        right: 1em;
-        top: 4.85rem;
-        left: 120%;
-        transition: left 0.5s;
-    }
-
-    .nav-menu-item {
-        height: 2.7rem;
-    }
-
-    .nav-menu_visible {left: 0;}
-
-    .nav-toggle {
-        display: block;
-        position: absolute; 
-        right: 1em;
-        top: 1em;
     }
 
     @keyframes deslizable {
