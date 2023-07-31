@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="css/styles.css">
     
         <script src="https://kit.fontawesome.com/e6b89d61c4.js" crossorigin="anonymous"></script>
+        <script defer src="js/index.js"></script>
         
         <title>PCCenter</title>
 
@@ -51,6 +52,7 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="Informe/Informe.docx">Informe</a></li>
+                                    <li><a class="dropdown-item" href="https://github.com/GuArBarrajon/Trabajo-Practico-3" target="_blank">Código</a></li>
                                     <li><a class="dropdown-item" href="Videos/video1.mp4">Video 1</a></li>
                                     <li><a class="dropdown-item" href="Videos/video2.mp4">Video 2</a></li>
                                     <li><a class="dropdown-item" href="Videos/video3.mp4">Video 3</a></li>
@@ -63,20 +65,20 @@
         </header>
 
         <main>
-            <section>
-                <article>
+            <section class="sectionFlex">
+                <article class="articleFlex">
                     <h2>La Empresa</h2>
                     <p>Somos una tienda con más 20 años dentro del rubro tecnológico en Argentina. Nos dedicamos a la venta de computadoras, notebooks, hardware y productos periféricos para consumidores particulares, empresas o revendedores.</p>
                     <p> En nuestros locales encontrarás todo lo que compone la PC de tus sueños. Conocemos nuestros productos y por ello te asesoramos para que hagas una compra personalizada a la altura de tus necesidades.</p>
                     <p>Además ofrecemos servicios de reparación de pc, notebooks, y cursos avalados por prestigiosas entidades, para que puedas obtener una rápida salida laboral.</p>
                 </article>
-                <article>
+                <article class="articleFlex">
                     <h2>Componentes para pc</h2>
                     <p>Contamos con gran variedad de marcas, como Asus, SkullCandy, MSI, Gigabyte, Kingston, Intel, Nvidia, HP, Epson, Samsung y Western Digital que nos han hecho sus representantes oficiales en el país.</p>
                     <img class="imagen" src="imagenes/computadora1.png" alt="PC gamer" width="200"><br>
                     <a href="productos.html" class="ofertas">Visite nuestras ofertas</a>
                 </article>
-                <article>
+                <article class="articleFlex">
                     <h2>Abierta la inscripción a nuestros cursos 2023</h2>
                     <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/pNVlLM8Ysaw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     <a href="servicios.html#horarios" class="ofertas">Consulte los horarios</a>
@@ -96,8 +98,50 @@
                 <li><img src="imagenes/logo10.png" alt="marca" class="logo"></li>
             </ul>
         </div>
-        </main>
+        <div class="d-flex">
+            <div id="carouselExampleSlidesOnly" class="carousel slide col-4" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="imagenes/memoria.png" class="d-block w-100 logo" alt="Memoria">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagenes/fuente.png" class="d-block w-100 logo" alt="Fuente">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagenes/placa.png" class="d-block w-100 logo" alt="Placa de video">
+                    </div>
+                </div>
+            </div>
+            <div id="carouselExampleSlidesOnly" class="carousel slide col-4" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="imagenes/teclado.png" class="d-block w-100 logo" alt="Teclado">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagenes/mouse.png" class="d-block w-100 logo" alt="Mouse">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagenes/cooler.png" class="d-block w-100 logo" alt="Cooler">
+                    </div>
+                </div>
+            </div>
+            <div id="carouselExampleSlidesOnly" class="carousel slide col-4" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="imagenes/parlantes.png" class="d-block w-100 logo" alt="Parlantes">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagenes/monitor.png" class="d-block w-100 logo" alt="Monitor">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagenes/auriculares.png" class="d-block w-100 logo" alt="Auriculares">
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        </main>
+        
         <footer>
             <div class="redes">
                 <a href="https://www.facebook.com/pccenterargentina/?locale=es_LA" target="_blank" title="Facebook"><i class="fa-brands fa-square-facebook"></i></a>

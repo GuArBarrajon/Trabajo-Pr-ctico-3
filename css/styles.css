@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(136, 141, 141);
+    overflow-x: hidden;
 }
 
 header {
@@ -116,23 +117,29 @@ main {
     background-size: 100%;
 }
 
-main div { 
+/*Se crean estas clases a fin de ubicar los articles usando flex y grid (no porque sea necesario)*/
+.sectionFlex {
     display: flex;
     justify-content: center;
-    font-size: 1.625em; /*antes 26px*/
+    padding: 1em;
+}
+.sectionGrid {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-around;
+    align-content: space-around;
+    grid-gap: 1em;
+    padding: 1em;
 }
 
-/*Al section hay que crearle dos clases, una flex con estos datos y otra grid para ubicar usando grid*/
-section {
-    display: flex;
-    justify-content: center;
-}
-
-article {
+.articleFlex {
     position: relative;
     margin: .625em; /*antes 10px*/
     padding: .625em; /*antes 10px*/
     width: 30%;
+}
+
+article {
     border: solid;
     border-radius: 5%;
     animation-name: estirarElemento;
@@ -281,8 +288,11 @@ article:hover > .boton_comprar {
 }
 
 .promociones {
+    display: flex;
+    justify-content: center;
+    font-size: 1.625em; /*antes 26px*/
     width: 100%;
-    overflow-x: hidden;} /*para que no me abra el scroll la animación*/
+    overflow: hidden;} /*para que no me abra el scroll la animación*/
 
 .marcas {
     display: flex;
@@ -349,12 +359,17 @@ como parte de la experimentación*/
 
 /*Portátiles*/
 @media (max-width: 992px) {
-    section {
+    .sectionFlex {
         flex-wrap: wrap;
     }
+    .sectionGrid {}
 
-    article {
+    .articleFlex {
         width: 40%;
+    }
+
+    .sectionGrid {
+        grid-template-columns: 40% 40%;
     }
     @keyframes deslizable {
         from {
@@ -369,8 +384,12 @@ como parte de la experimentación*/
 @media (max-width: 768px) {
     body {font-size: 12px;}
 
-    article {
+    .articleFlex {
         width: 70%;
+    }
+
+    .sectionGrid {
+        grid-template-columns: 70%;
     }
 
     @keyframes deslizable {
@@ -387,7 +406,11 @@ como parte de la experimentación*/
 
 /*Celulares*/
 @media (max-width: 576px) {
-    article {
+    .articleFlex {
         width: 85%;
+    }
+
+    .sectionGrid {
+        grid-template-columns: 85%;
     }
 }
